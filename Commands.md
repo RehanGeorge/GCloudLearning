@@ -15,5 +15,12 @@ gcloud config set compute/zone us-east1-c - Sets the default zone to c
 
 ## Labels
 
-### Create Instance with Labels
+### Create Virtual Machine Instance with Labels
 gcloud compute instances create [instance-name] --labels key=value, key=value
+
+### List existing labels
+gcloud compute instances desceibe [instance-name] --format "[format](labels)"
+gcloud compute instances desceibe [instance-name] --format "yaml(labels)" - displays in yaml format
+
+### Update existing labels
+gcloud compute instances update instance-2 --update-labels team=performance
